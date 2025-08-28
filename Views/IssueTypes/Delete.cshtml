@@ -1,0 +1,15 @@
+﻿@model IssueTracker.Models.IssueType
+
+<h2>Delete Issue Type</h2>
+<h4>Are you sure you want to delete this?</h4>
+
+<div>
+    <strong>@Model.IssueName</strong>
+</div>
+
+<form asp-action="DeleteConfirmed">
+    <input type="hidden" asp-for="IssueTypeId" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+

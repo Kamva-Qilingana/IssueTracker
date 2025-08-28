@@ -1,0 +1,15 @@
+﻿@model IssueTracker.Models.IssueType
+
+<h2>Edit Issue Type</h2>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="IssueTypeId" />
+    <div class="form-group">
+        <label asp-for="IssueName"></label>
+        <input asp-for="IssueName" class="form-control" />
+        <span asp-validation-for="IssueName" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+</form>
+
